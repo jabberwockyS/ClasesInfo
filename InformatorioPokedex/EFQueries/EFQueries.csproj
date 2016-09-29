@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F9F6F4FB-FF99-4DFE-8F37-6372724A7586}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{E916B63D-C9D8-432D-AD5B-B3ACFCFB0F89}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>InformatorioPokedex.Data</RootNamespace>
-    <AssemblyName>InformatorioPokedex.Data</AssemblyName>
+    <RootNamespace>EFQueries</RootNamespace>
+    <AssemblyName>EFQueries</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -46,16 +48,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PokemonDA\Pokemon.cs" />
-    <Compile Include="PokemonDA\PokemonContext.cs" />
-    <Compile Include="PokemonDA\PokemonType.cs" />
-    <Compile Include="PokemonDA\Trainer.cs" />
-    <Compile Include="DataManager.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InformatorioPokedex.Data\InformatorioPokedex.Data.csproj">
+      <Project>{f9f6f4fb-ff99-4dfe-8f37-6372724a7586}</Project>
+      <Name>InformatorioPokedex.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

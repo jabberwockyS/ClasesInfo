@@ -26,7 +26,15 @@ namespace InformatorioPokedex.Bussiness
             }
             else
             {
-                this.DataManager.Add(newPokemon);
+                var dbPokemon = new InformatorioPokedex.Data.PokemonDA.Pokemon();
+                dbPokemon.Name = newPokemon.Name;
+                dbPokemon.Type = (InformatorioPokedex.Data.PokemonDA.PokemonType)newPokemon.Type;
+                dbPokemon.CaptureDate = DateTime.Today;
+                var trainer = new Data.PokemonDA.Trainer();
+                trainer.Name = "ash ketchum de pueblo paleta";
+                dbPokemon.Trainer = trainer;
+
+                this.DataManager.Add(dbPokemon);
                 Console.WriteLine("The pokemon {0} was added successfully", newPokemon.Name);
             }
         }
@@ -57,7 +65,7 @@ namespace InformatorioPokedex.Bussiness
         public void ShowPokemonLIst()
         {
             var pokemos = DataManager.GetAll();
-            foreach (Pokemon p in pokemos)
+            foreach (InformatorioPokedex.Data.PokemonDA.Pokemon p in pokemos)
             {
                 Console.WriteLine(p.Name);
             }

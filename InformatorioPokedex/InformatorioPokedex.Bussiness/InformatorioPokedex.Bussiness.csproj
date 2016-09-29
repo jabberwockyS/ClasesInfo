@@ -40,6 +40,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Pokedex.cs" />
+    <Compile Include="Pokemons\Fire.cs" />
+    <Compile Include="Pokemons\Grass.cs" />
+    <Compile Include="Pokemons\Pokemon.cs" />
+    <Compile Include="Pokemons\PokemonType.cs" />
+    <Compile Include="Pokemons\Water.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

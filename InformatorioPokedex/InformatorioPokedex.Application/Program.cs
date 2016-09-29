@@ -14,9 +14,17 @@ namespace InformatorioPokedex.Application
         static void Main(string[] args)
         {
             var pokedex = new Pokedex();
-
-            pokedex.RegisterNewPokemon("Charmander", "Char", PokemonType.Fire, 2.5, 1.33);
-            pokedex.ShowPokemonLIst();
+            try
+            {
+                pokedex.RegisterNewPokemon("Pikachu", "Char", PokemonType.Fire, 2.5, 1.33);
+                pokedex.ShowPokemonLIst();
+            }
+            catch (Exception ex)
+            {
+                
+                throw ex;
+            }
+            
 
 
 
